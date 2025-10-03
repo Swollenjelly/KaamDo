@@ -1,9 +1,9 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import AppDataSource from '../../config/data-source';
-import { User } from '../users/user.entity';
-import { VendorProfile } from '../vendors/vendor.entity';
-import { env } from '../../config/env';
+import AppDataSource from '../config/data-source';
+import { User } from '../modules/user.entity';
+import { VendorProfile } from '../modules/vendor.entity';
+import { env } from '../config/env';
 
 export const AuthService = {
   async register(email: string, name: string, password: string, role: 'customer'|'vendor'|'admin'='customer') {

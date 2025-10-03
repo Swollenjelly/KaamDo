@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import { Router } from 'express';
-import authRoutes from './modules/auth/auth.controller';
+import authRoutes from './controllers/auth.controller';
 
 export const routes = Router();
-routes.use('/auth', authRoutes);
+routes.use('/auth', authRoutes,);
 
 
 export interface HelloRouteRequest extends Request {}

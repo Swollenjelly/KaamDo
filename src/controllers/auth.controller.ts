@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { z } from 'zod';
-import { AuthService } from './auth.service';
+import { AuthService } from '../services/auth.service';
 
 const r = Router();
 
@@ -21,6 +21,7 @@ r.post('/register', async (req, res, next) => {
     const { email, name, password, role } = registerDto.parse(req.body);
     const user = await AuthService.register(email, name, password, role ?? 'customer');
     res.status(201).json({ user });
+    return 1
   } catch (e) { next(e); }
 });
 

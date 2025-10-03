@@ -1,8 +1,8 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import { env } from './env';
-import { User } from '../modules/users/user.entity';
-import { VendorProfile } from '../modules/vendors/vendor.entity';
+import { User } from '../modules/user.entity';
+import { VendorProfile } from '../modules/vendor.entity';
 
 // export const AppDataSource = new DataSource({
 //   type: 'postgres',
