@@ -7,8 +7,11 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id!: string;
 
-  @Column({ unique: true })
-  email!: string;
+  @Column({ type: 'varchar', length: 15, unique: true })
+  phone!: string;              // required + unique
+
+  @Column({ type: 'varchar', length: 255, nullable: true, unique: true })
+  email?: string;              // optional + unique
 
   @Column()
   name!: string;
